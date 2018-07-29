@@ -1,15 +1,43 @@
+{% load static %}
 <html>
   <head>
     <title>Inventario de Ardila</title>
+    <link rel="stylesheet" 
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
+      crossorigin="anonymous">
+    <link rel="stylesheet"
+      href="{% static 'css/base.css' %}">
   </head>
   <body>
-    <h1>Chupa el pico</h1>
-    <p>Ardila culiao</p>
-    <div id="app">
-      <ul v-for="product in products">
-        <li> {$ product.name $} - ({$ product.quantity $} en stock)  </li>
-      </ul>
+    <nav class="navbar navbar-light bg-light">
+      <div class=" container">
+        <a class="navbar-brand" href="#">
+          <img src="https://pbs.twimg.com/profile_images/378800000777798112/87173c55ccaacd0b7ac5d835c107d44a_400x400.jpeg" width="40" height="40" alt="">
+          Culto SPA
+        </a>
+      </div>
+    </nav>
+    <div class=" container">
+      <h1>Lista de productos</h1>
+      <div id="app">
+        <ul v-for="product in products">
+          <li> {$ product.name $} - ({$ product.quantity $} en stock)  </li>
+        </ul>
+      </div>
     </div>
+    <footer class="footer">
+      <div class="container">
+        <span class="text-muted">© 2018, Culto SPA.</span>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" 
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script>
