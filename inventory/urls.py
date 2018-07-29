@@ -1,4 +1,4 @@
-from .views import ProductViewSet
+from inventory.views import ProductViewSet
 from rest_framework.routers import DefaultRouter
 
 router = DefaultRouter()
