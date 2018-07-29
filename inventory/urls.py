@@ -1,6 +1,6 @@
-#from .views import ProductViewSet
-#from rest_framework.routers import DefaultRouter
+from .views import ProductViewSet
+from rest_framework.routers import DefaultRouter
 
-#router = DefaultRouter()
-#router.register(r'products', ProductViewSet, base_name='product')
-#urlpatterns = router.urls
+router = DefaultRouter()
+router.register(r'products', ProductViewSet, base_name='product')
+urlpatterns = router.urls
