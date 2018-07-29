@@ -7,4 +7,4 @@ class Product(models.Model):
     quantity = models.PositiveIntegerField(default=0)
     
     def __str__(self):
-        "<product: {} -- qty: {}>".format(self.name, self.quantity)
+        return "<product: {} -- qty: {}>".format(self.name, self.quantity)
