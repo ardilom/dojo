@@ -1,9 +1,22 @@
 <html>
-    <head>
-      <title>Inventario de Ardila</title>
-    </head>
-    <body>
-      <h1>Chupa el pico</h1>
-      <p>Ardila culiao</p>
-    </body>
+  <head>
+    <title>Inventario de Ardila</title>
+  </head>
+  <body>
+    <h1>Chupa el pico</h1>
+    <p>Ardila culiao</p>
+    <div id="app">
+      {$ message $}
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js"></script>
+    <script>
+      var app = new Vue({
+        delimiters: ['{$', '$}'],
+        el: '#app',
+        data: {
+          message: 'Hello Vue!'
+        }
+      })
+    </script>
+  </body>
 </html>
