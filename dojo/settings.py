@@ -25,7 +25,10 @@ SECRET_KEY = '*&-1&bc!7z5k)dgbmq7mq)p&ho^4!z(mztn*3=ijoc7=q%3-j&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'dojo-ardilom.c9users.io', 
+    'localhost',
+]
 
 
 # Application definition
